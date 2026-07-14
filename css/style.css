@@ -1,0 +1,930 @@
+/* =========================================================
+   Barbara Van Dromme
+   Contemporary Arboreal Artist
+   Main stylesheet
+   ========================================================= */
+
+
+/* ---------- Fonts ---------- */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500&display=swap');
+
+
+/* ---------- General ---------- */
+
+:root {
+
+    --background: #faf9f5;
+    --text: #292929;
+    --soft-text: #5f5f5a;
+    --white: #ffffff;
+    --line: rgba(40,40,40,0.15);
+
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    margin: 0;
+
+    background: var(--background);
+
+    color: var(--text);
+
+    font-family: "Inter", Arial, sans-serif;
+
+    font-weight: 300;
+
+    line-height: 1.7;
+
+}
+
+
+
+/* ---------- Typography ---------- */
+
+
+h1,
+h2 {
+
+    font-family: "Cormorant Garamond", Georgia, serif;
+
+    font-weight: 400;
+
+    letter-spacing: 0.02em;
+
+}
+
+
+h1 {
+
+    margin: 0;
+
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    line-height: 1.05;
+
+}
+
+
+h2 {
+
+    font-size: clamp(2rem, 4vw, 3rem);
+
+    margin-bottom: 1.5rem;
+
+}
+
+
+p {
+
+    max-width: 700px;
+
+}
+
+
+
+/* ---------- Hero ---------- */
+
+
+.hero {
+
+    min-height: 100vh;
+
+    width: 100%;
+
+    position: relative;
+
+
+    background-image:
+
+    linear-gradient(
+
+        rgba(0,0,0,0.20),
+
+        rgba(0,0,0,0.38)
+
+    ),
+
+    url("../images/hero.jpg");
+
+
+    background-size: cover;
+
+    background-position: center center;
+
+    background-repeat: no-repeat;
+
+
+    color: white;
+
+}
+
+
+
+/* ---------- Navigation ---------- */
+
+
+.navigation {
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+
+    padding: 2rem 5%;
+
+    z-index: 10;
+
+}
+
+
+
+.logo {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 1.4rem;
+
+    letter-spacing: 0.25em;
+
+}
+
+
+
+.menu {
+
+    display: flex;
+
+    gap: 2.5rem;
+
+}
+
+
+
+.menu a {
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 0.95rem;
+
+    letter-spacing: 0.08em;
+
+    transition: opacity .3s ease;
+
+}
+
+
+
+.menu a:hover {
+
+    opacity: .65;
+
+}
+
+
+
+/* ---------- Hero text ---------- */
+
+
+.hero-content {
+
+    position: absolute;
+
+
+    left: 7%;
+
+    bottom: 12%;
+
+
+    max-width: 800px;
+
+}
+
+
+
+.subtitle {
+
+    font-size: 1.4rem;
+
+    margin: 1rem 0 0.5rem;
+
+    letter-spacing: 0.08em;
+
+}
+
+
+
+.categories {
+
+    font-size: 1rem;
+
+    letter-spacing: 0.12em;
+
+    margin-top: 1rem;
+
+}
+
+
+
+/* ---------- Sections ---------- */
+
+
+main {
+
+    width: 100%;
+
+}
+
+
+
+.intro,
+
+.artist-note,
+
+.exhibition-preview {
+
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+
+    padding: 6rem 2rem;
+
+
+    text-align: center;
+
+}
+
+
+
+.intro p,
+
+.artist-note p,
+
+.exhibition-preview p {
+
+    margin-left: auto;
+
+    margin-right: auto;
+
+}
+
+
+
+/* ---------- Collection blocks ---------- */
+
+
+.collection-preview {
+
+
+    display: grid;
+
+
+    grid-template-columns: repeat(3, 1fr);
+
+
+    gap: 2rem;
+
+
+    margin-top: 4rem;
+
+}
+
+
+
+.collection-preview a {
+
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+
+    min-height: 240px;
+
+
+    background: white;
+
+
+    color: var(--text);
+
+
+    text-decoration: none;
+
+
+    font-family: "Cormorant Garamond", serif;
+
+
+    font-size: 2rem;
+
+
+    transition: transform .3s ease,
+                box-shadow .3s ease;
+
+
+}
+
+
+
+.collection-preview a:hover {
+
+
+    transform: translateY(-6px);
+
+
+    box-shadow: 0 15px 35px rgba(0,0,0,.08);
+
+
+}
+
+
+
+/* ---------- Links ---------- */
+
+
+.artist-note a,
+
+.exhibition-preview a {
+
+
+    display: inline-block;
+
+
+    margin-top: 1.5rem;
+
+
+    color: var(--text);
+
+
+    text-decoration: none;
+
+
+    border-bottom: 1px solid var(--text);
+
+
+    padding-bottom: .3rem;
+
+
+}
+
+
+
+/* ---------- Footer ---------- */
+
+
+footer {
+
+
+    text-align: center;
+
+
+    padding: 3rem 1rem;
+
+
+    border-top: 1px solid var(--line);
+
+
+    font-size: .9rem;
+
+
+    color: var(--soft-text);
+
+
+}
+
+
+
+/* ---------- Responsive ---------- */
+
+
+@media (max-width: 900px) {
+
+
+    .menu {
+
+        gap: 1rem;
+
+    }
+
+
+    .collection-preview {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+}
+
+
+
+@media (max-width: 650px) {
+
+
+
+    .navigation {
+
+        padding: 1.5rem;
+
+    }
+
+
+
+    .menu {
+
+        display: none;
+
+    }
+
+
+
+    .hero {
+
+
+        background-position: 55% center;
+
+    }
+
+
+
+    .hero-content {
+
+        left: 5%;
+
+        right: 5%;
+
+        bottom: 10%;
+
+    }
+
+
+
+    .subtitle {
+
+        font-size: 1.1rem;
+
+    }
+
+
+
+    .categories {
+
+        font-size: .85rem;
+
+    }
+
+
+
+}
+
+/* =========================================================
+   Gallery and internal pages
+   ========================================================= */
+
+
+/* ---------- Internal page header ---------- */
+
+
+.page-header {
+
+    min-height: 55vh;
+
+    position: relative;
+
+    background:
+
+    linear-gradient(
+        rgba(0,0,0,0.35),
+        rgba(0,0,0,0.45)
+    ),
+
+    url("../images/hero.jpg");
+
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+
+}
+
+
+
+.page-title {
+
+    position: absolute;
+
+    left: 7%;
+
+    bottom: 15%;
+
+}
+
+
+
+.page-title h1 {
+
+    margin-bottom: 1rem;
+
+}
+
+
+
+.page-title p {
+
+    letter-spacing: 0.12em;
+
+    font-size: 1rem;
+
+}
+
+
+
+/* ---------- Gallery page ---------- */
+
+
+.gallery-page {
+
+    width: 100%;
+
+}
+
+
+
+.collection {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 6rem 2rem;
+
+}
+
+
+
+.collection:not(:last-child) {
+
+    border-bottom: 1px solid var(--line);
+
+}
+
+
+
+.collection h2 {
+
+    text-align: center;
+
+}
+
+
+
+.collection-intro {
+
+    text-align: center;
+
+    margin: 0 auto 3rem;
+
+    color: var(--soft-text);
+
+}
+
+
+
+/* ---------- Artwork grid ---------- */
+
+
+.art-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 2.5rem;
+
+}
+
+
+
+.artwork {
+
+    background: white;
+
+    overflow: hidden;
+
+}
+
+
+
+.artwork img {
+
+    width: 100%;
+
+    display: block;
+
+    aspect-ratio: 4 / 5;
+
+    object-fit: cover;
+
+    transition: transform .5s ease;
+
+}
+
+
+
+.artwork:hover img {
+
+    transform: scale(1.03);
+
+}
+
+
+
+.art-info {
+
+    padding: 1.5rem;
+
+}
+
+
+
+.art-info h3 {
+
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: 1.7rem;
+
+    font-weight: 400;
+
+    margin: 0 0 .5rem;
+
+}
+
+
+
+.art-info p {
+
+    color: var(--soft-text);
+
+    font-size: .9rem;
+
+}
+
+
+
+/* ---------- Responsive gallery ---------- */
+
+
+@media (max-width: 1000px) {
+
+
+    .art-grid {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+
+}
+
+
+
+@media (max-width: 650px) {
+
+
+    .page-header {
+
+        min-height: 45vh;
+
+    }
+
+
+    .page-title {
+
+        left: 5%;
+
+        right: 5%;
+
+        bottom: 12%;
+
+    }
+
+
+    .collection {
+
+        padding: 4rem 1.5rem;
+
+    }
+
+
+    .art-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+}
+
+/* =========================================================
+   About page
+   ========================================================= */
+
+
+.about-content {
+
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding: 6rem 2rem;
+
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 5rem;
+
+    align-items: center;
+
+}
+
+
+
+.about-image img {
+
+    width: 100%;
+
+    display: block;
+
+}
+
+
+
+.about-text h2 {
+
+    margin-top: 0;
+
+}
+
+
+
+.about-text p {
+
+    margin-bottom: 1.5rem;
+
+    color: var(--soft-text);
+
+}
+
+
+
+.artist-statement {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    padding: 5rem 2rem;
+
+
+    text-align: center;
+
+
+    border-top: 1px solid var(--line);
+
+}
+
+
+
+.artist-statement p {
+
+    margin: auto;
+
+
+    font-family: "Cormorant Garamond", serif;
+
+
+    font-size: 2rem;
+
+
+    font-style: italic;
+
+    line-height: 1.5;
+
+}
+
+
+
+
+@media (max-width: 850px) {
+
+
+    .about-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 3rem;
+
+    }
+
+
+}
+
+/* =========================================================
+   Lightbox
+   ========================================================= */
+
+
+.lightbox {
+
+position: fixed;
+
+inset: 0;
+
+background: rgba(0,0,0,.85);
+
+display: flex;
+
+align-items: center;
+
+justify-content: center;
+
+opacity: 0;
+
+visibility: hidden;
+
+transition: .3s ease;
+
+z-index: 1000;
+
+}
+
+
+
+.lightbox.active {
+
+opacity: 1;
+
+visibility: visible;
+
+}
+
+
+
+.lightbox img {
+
+max-width: 90%;
+
+max-height: 90%;
+
+}
+
+
+
+.lightbox .close {
+
+position: absolute;
+
+top: 2rem;
+
+right: 3rem;
+
+color: white;
+
+font-size: 3rem;
+
+cursor: pointer;
+
+}
