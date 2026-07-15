@@ -300,6 +300,91 @@ main {
 
 /* ---------- Collection blocks ---------- */
 
+.category-card{
+
+    position:relative;
+
+    display:block;
+
+    overflow:hidden;
+
+    margin:7rem auto;
+
+    text-decoration:none;
+
+}
+
+.category-card img{
+
+    width:100%;
+
+    display:block;
+
+    transition:
+        transform .6s ease,
+        filter .6s ease;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    display:flex;
+
+    justify-content:center;
+
+	align-items: flex-end;
+
+	padding-bottom: 12%;
+
+    transition:background .6s ease;
+
+}
+
+.overlay h2{
+
+    color:rgba(255,255,255,.88);
+
+    font-family:"Cormorant Garamond", serif;
+
+    font-size:clamp(2rem,5vw,4rem);
+
+    font-weight:400;
+
+    letter-spacing:.12em;
+
+    text-transform:uppercase;
+
+    text-shadow:0 2px 14px rgba(0,0,0,.30);
+
+    transition:
+        transform .45s ease,
+        color .45s ease,
+        letter-spacing .45s ease;
+
+}
+
+.category-card:hover img{
+
+    transform:scale(1.015);
+
+    filter:brightness(.92);
+
+}
+
+.category-card:hover .overlay h2{
+
+    transform:translateY(-3px);
+
+    color:white;
+
+    letter-spacing:.15em;
+
+}
+
 
 .collection-preview {
 
