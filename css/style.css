@@ -93,6 +93,20 @@ p {
 }
 
 
+.home-button img {
+    border: none;
+    vertical-align: middle;
+ 	opacity: 0.85;
+    transition: opacity 0.2s ease;
+}
+
+.home-button img:hover {
+    opacity: 1;
+}
+
+
+
+
 
 /* ---------- Hero ---------- */
 
